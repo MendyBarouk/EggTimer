@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		963A00A41E8103B100C11D7C /* alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 963A00A21E8103B100C11D7C /* alarm.mp3 */; };
+		963A00A51E8103B100C11D7C /* bip.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 963A00A31E8103B100C11D7C /* bip.mp3 */; };
 		96942D4C1E792DEF008ED434 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96942D4B1E792DEF008ED434 /* AppDelegate.swift */; };
 		96942D4E1E792DEF008ED434 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96942D4D1E792DEF008ED434 /* ViewController.swift */; };
 		96942D511E792DEF008ED434 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96942D4F1E792DEF008ED434 /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		963A00A21E8103B100C11D7C /* alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm.mp3; sourceTree = "<group>"; };
+		963A00A31E8103B100C11D7C /* bip.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bip.mp3; sourceTree = "<group>"; };
 		96942D481E792DEF008ED434 /* EggTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EggTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96942D4B1E792DEF008ED434 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96942D4D1E792DEF008ED434 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +59,8 @@
 			isa = PBXGroup;
 			children = (
 				96942D4B1E792DEF008ED434 /* AppDelegate.swift */,
+				963A00A21E8103B100C11D7C /* alarm.mp3 */,
+				963A00A31E8103B100C11D7C /* bip.mp3 */,
 				96942D4D1E792DEF008ED434 /* ViewController.swift */,
 				96942D4F1E792DEF008ED434 /* Main.storyboard */,
 				96942D521E792DEF008ED434 /* Assets.xcassets */,
@@ -123,7 +129,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				963A00A41E8103B100C11D7C /* alarm.mp3 in Resources */,
 				96942D561E792DEF008ED434 /* LaunchScreen.storyboard in Resources */,
+				963A00A51E8103B100C11D7C /* bip.mp3 in Resources */,
 				96942D531E792DEF008ED434 /* Assets.xcassets in Resources */,
 				96942D511E792DEF008ED434 /* Main.storyboard in Resources */,
 			);
@@ -299,6 +307,7 @@
 				96942D5C1E792DEF008ED434 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

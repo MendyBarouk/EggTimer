@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EggTimer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,8 +20,75 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tdn-Gm-8gM">
+                                <rect key="frame" x="55.5" y="155" width="263" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="00c-Mr-rHE"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="g9T-Bi-XSu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="63"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oVf-nD-5Xj">
+                                <rect key="frame" x="87" y="278" width="200" height="36"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KPD-tE-TRJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="goh-D9-oS4"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Start"/>
+                                        <connections>
+                                            <action selector="startAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OsV-6W-BRi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Bz-a5-MN8">
+                                        <rect key="frame" x="100" y="0.0" width="100" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="A6c-4c-Ekp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Reset"/>
+                                        <connections>
+                                            <action selector="resetAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nd4-oY-8dO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="KPD-tE-TRJ" firstAttribute="leading" secondItem="oVf-nD-5Xj" secondAttribute="leading" id="S83-Pc-Fmd"/>
+                                    <constraint firstAttribute="bottom" secondItem="2Bz-a5-MN8" secondAttribute="bottom" id="iw6-k6-J4i"/>
+                                    <constraint firstItem="2Bz-a5-MN8" firstAttribute="top" secondItem="oVf-nD-5Xj" secondAttribute="top" id="jd3-GI-b7R"/>
+                                    <constraint firstAttribute="trailing" secondItem="2Bz-a5-MN8" secondAttribute="trailing" id="lvf-Y2-AXE"/>
+                                    <constraint firstItem="KPD-tE-TRJ" firstAttribute="top" secondItem="oVf-nD-5Xj" secondAttribute="top" id="qHl-FE-bdB"/>
+                                    <constraint firstAttribute="bottom" secondItem="KPD-tE-TRJ" secondAttribute="bottom" id="wid-wJ-fKX"/>
+                                </constraints>
+                            </stackView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9mN-yc-6Yu">
+                                <rect key="frame" x="0.0" y="437" width="375" height="230"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="230" id="CmX-Fg-4hN"/>
+                                </constraints>
+                            </pickerView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Tdn-Gm-8gM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="akr-l7-mwh"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9mN-yc-6Yu" secondAttribute="bottom" id="dWX-2F-gip"/>
+                            <constraint firstAttribute="trailing" secondItem="9mN-yc-6Yu" secondAttribute="trailing" id="iaO-Vz-GYA"/>
+                            <constraint firstItem="oVf-nD-5Xj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ont-Pe-r2x"/>
+                            <constraint firstItem="oVf-nD-5Xj" firstAttribute="top" secondItem="Tdn-Gm-8gM" secondAttribute="bottom" constant="63" id="qSx-Gm-N9A"/>
+                            <constraint firstItem="Tdn-Gm-8gM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="135" id="sok-H9-jT7"/>
+                            <constraint firstItem="9mN-yc-6Yu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zUm-YP-TSk"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="eggsPickerView" destination="9mN-yc-6Yu" id="C6b-9t-jaQ"/>
+                        <outlet property="startButton" destination="KPD-tE-TRJ" id="Wfo-5x-byZ"/>
+                        <outlet property="timerLabel" destination="Tdn-Gm-8gM" id="BUf-A4-vPT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
